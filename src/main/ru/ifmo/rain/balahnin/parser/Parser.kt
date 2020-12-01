@@ -93,7 +93,7 @@ private fun realUnary(): ExpressionNode {
         MINUS -> {
             res.children.add(ExpressionNode(tokens[current].toString(), true))
             next()
-            res.children.add(realUnary())
+            res.children.add(primary())
             res
         }
         NUMBER, OPEN_BRACKET -> {
